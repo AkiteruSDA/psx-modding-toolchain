@@ -4,7 +4,7 @@ apt-get update
 apt-get -y upgrade
 # install dependencies
 apt-get -y install build-essential curl git pkg-config cmake texinfo libmpfr-dev libisl-dev libgmp-dev libmpc-dev libtinyxml2-dev unzip wget
-apt-get -y install python3 python3-pip python3-dev libgl1
+apt-get -y install python3 python3-pip python3-dev libgl1 pipx
 
 cd $RUNTIME_DIR
 echo $PWD

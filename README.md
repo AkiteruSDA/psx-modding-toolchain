@@ -37,6 +37,15 @@ $ git clone https://github.com/mateusfavarin/psx-modding-toolchain.git
 ```
 
 ### python dependencies
+Install the dependencies included first because the ones through pip are broken:
+```
+cd pymkpsxiso-0.1.6
+pip install .
+cd ../pyxdelta-0.2.0
+pip install .
+cd ..
+```
+
 Install the python dependencies from the command line
 ```
 $ pip install --upgrade pip setuptools wheel

@@ -1,0 +1,40 @@
+{
+	"version": 3,
+	"cmakeMinimumRequired": {
+		"major": 3,
+		"minor": 19,
+		"patch": 0
+	},
+	"configurePresets": [
+		{
+			"name":        "release",
+			"displayName": "Release build",
+			"description": "Use this preset when building mkpsxiso for local installation.",
+			"binaryDir":   "${sourceDir}/build",
+			"cacheVariables": {
+				"CMAKE_BUILD_TYPE": "Release",
+				"CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE": "Release"
+			}
+		},
+		{
+			"name":        "debug",
+			"displayName": "Debug configuration",
+			"description": "Use this preset when debugging mkpsxiso.",
+			"binaryDir":   "${sourceDir}/build",
+			"cacheVariables": {
+				"CMAKE_BUILD_TYPE": "Debug",
+				"CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG": "Debug"
+			}
+		},
+		{
+			"name":        "ci",
+			"displayName": "CI build",
+			"description": "This preset is used by GitHub Actions to build mkpsxiso.",
+			"generator":   "Ninja",
+			"binaryDir":   "${sourceDir}/../build",
+			"cacheVariables": {
+				"CMAKE_BUILD_TYPE": "Release"
+			}
+		}
+	]
+}

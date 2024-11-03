@@ -10,6 +10,7 @@
 #include <gpu.h>
 #include <stdio.h>
 #include <stdarg.h>
+#include <stddef.h>
 #define _TAB_SIZE_ 2
 
 #if BUILD == 561
